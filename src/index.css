@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body);
+}
+
+/* Light mode — applied when html has class="light" */
+html.light body {
+  background-color: #f5f0e8;
+  color: #1a1208;
+}
+
+html.light section,
+html.light nav {
+  background-color: #f5f0e8 !important;
+}
+
+html.light .bg-\[\#0a0a0f\],
+html.light .bg-\[\#0e0e1a\],
+html.light .bg-\[\#13131f\] {
+  background-color: #f0ebe0 !important;
+}
+
+html.light p,
+html.light span:not(.logo-gradient):not([class*="text-\[#c9a84c\]"]) {
+  color: #5a5040;
+}
+
+html.light h1,
+html.light h2,
+html.light h3 {
+  color: #1a1208 !important;
+}
+
+html.light .border-white\/\[0\.07\],
+html.light .border-white\/\[0\.05\],
+html.light .border-white\/\[0\.06\] {
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb { background: #4A5568; border-radius: 2px; }
+
+@keyframes gold-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.logo-gradient {
+  background: linear-gradient(90deg, #c9a84c, #f5d98b, #e8c060, #a8722a, #c9a84c);
+  background-size: 300% 300%;
+  animation: gold-gradient 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.75); }
+}
+.pulse-dot { animation: pulse-dot 2s infinite; }
+
+@keyframes scroll-line {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.scroll-line { animation: scroll-line 2s ease-in-out infinite; }
+
+/* Scroll reveal */
+.reveal-box {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-box.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Skill/project cards scroll reveal */
+.sk-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s;
+}
+.sk-card.sk-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes exp-fade-in {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.exp-in  { animation: exp-fade-in 0.3s ease forwards; }
+.exp-out { opacity: 0; transform: translateX(-12px); transition: all 0.18s ease; }
+
+/* Light mode transitions */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
