@@ -11,7 +11,12 @@ export default function Hero() {
   const [displayed, setDisplayed] = useState('')
   const [deleting, setDeleting] = useState(false)
   const [showCursor, setShowCursor] = useState(true)
+useEffect(() => {
 
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual'
+  }
+}, [])
   // ── Particle canvas ──────────────────────────────────────────────
   useEffect(() => {
     const canvas = canvasRef.current
@@ -215,7 +220,7 @@ export default function Hero() {
               </div>
 
               {/* Description */}
-              <p className=" text-base leading-relaxed mb-8 max-w-md font-light" style={{ color: 'var(--text-secondary)' }}
+              <p className=" text-base leading-relaxed mb-8 max-w-md text-white/80" 
 >
                 Crafting digital experiences that live beyond screens. Building
                 products used across{' '}

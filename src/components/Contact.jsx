@@ -18,8 +18,8 @@ const contacts = [
       </svg>
     ),
     label: 'LinkedIn',
-    value: 'YOUR-LINKEDIN',
-    href: 'https://linkedin.com/in/YOUR-LINKEDIN',
+    value: 'oluchi-c-mercy',
+    href: 'http://www.linkedin.com/in/olucho-c-mercy',
   },
   {
     icon: (
