@@ -1,44 +1,43 @@
 import { useEffect, useRef } from 'react'
-
+import { Icon } from '@iconify/react'
 const categories = [
   {
-    icon: '⚛️',
+    icon: 'tabler:code',
     title: 'Frontend',
     color: '#4f8ef7',
     skills: ['React.js', 'Next.js', 'Vite.js', 'JavaScript ES6+', 'TypeScript', 'HTML5', 'CSS3'],
   },
   {
-    icon: '🎨',
-    title: 'UI& Styling',
+    icon: 'tabler:brush',
+    title: 'UI & Styling',
     color: '#e879a0',
     skills: ['Tailwind CSS', 'Bootstrap', 'Responsive Design', 'Figma-to-Code', 'Shadcn/UI'],
   },
   {
-    icon: '🔧',
+    icon: 'tabler:tools',
     title: 'Tools',
     color: '#a78bfa',
     skills: ['Git / GitHub', 'Postman', 'ClickUp', 'Jira', 'VS Code', 'Figma'],
   },
   {
-    icon: '🗄️',
+    icon: 'tabler:plug-connected',
     title: 'APIs & Integration',
     color: '#34d399',
     skills: ['RESTful APIs', 'Stripe API', 'Supplier APIs', 'Social Platform APIs'],
   },
   {
-    icon: '⚡',
+    icon: 'tabler:layers-subtract',
     title: 'Other',
     color: '#fb923c',
     skills: ['Recharts', 'Chart.js', 'Lottie', 'Redux Toolkit', 'React Query', 'Lazy Loading'],
   },
   {
-    icon: '🤝',
+    icon: 'tabler:users',
     title: 'Soft Skills',
     color: '#fbbf24',
     skills: ['Team Leadership', 'Cross-functional Collaboration', 'Problem Solving', 'Critical Thinking'],
   },
 ]
-
 const marqueeItems = [
   'React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit',
   'Figma-to-Code', 'Shadcn/UI', 'Git / GitHub', 'Stripe API', 'REST APIs',
@@ -66,10 +65,10 @@ function SkillCard({ cat, index }) {
     >
       {/* Icon + title */}
       <div className="flex items-center gap-3 mb-3">
-        <div className="w-9 h-9 rounded-lg flex items-center justify-center text-lg"
-          style={{ background: `${cat.color}18` }}>
-          {cat.icon}
-        </div>
+     <div className="w-9 h-9 rounded-lg flex items-center justify-center"
+  style={{ background: `${cat.color}18` }}>
+  <Icon icon={cat.icon} width={20} />
+</div>
         <div>
           <h3 className="font-display font-bold text-white text-base">{cat.title}</h3>
           <div className="h-0.5 w-8 rounded-full mt-1" style={{ background: cat.color }} />
