@@ -11,6 +11,15 @@ const projects = [
     color: '#4f8ef7',
   },
   {
+  letter: 'M',
+  name: 'MPG Club & Events',
+  category: 'Events Platform',
+  desc: 'Contributed to a scalable React/Next.js web platform for an events and club management company, building responsive UI components and supporting CI/CD deployment workflows on AWS and GitHub Actions.',
+  features: ['Responsive UI', 'CI/CD', 'Performance'],
+  tech: ['React', 'Next.js', 'Vite', 'Tailwind CSS'],
+  color: '#34d399',
+},
+  {
     letter: 'B',
     name: 'Blutech E-commerce',
     category: 'E-commerce Platform',
@@ -19,7 +28,7 @@ const projects = [
     tech: ['React', 'Vite', 'JavaScript', 'Bootstrap'],
     color: '#c9a84c',
   },
-  {
+/*   {
     letter: 'Y',
     name: 'Yashe Web App',
     category: 'Consumer Web App',
@@ -27,7 +36,7 @@ const projects = [
     features: ['Figma-to-Code', 'Animations', 'Redux'],
     tech: ['React', 'Redux Toolkit', 'Lottie', 'REST APIs'],
     color: '#a78bfa',
-  },
+  }, */
 /*   {
     letter: 'L',
     name: 'Landing Page Rebuild',

@@ -17,6 +17,21 @@ const jobs = [
     ],
   },
   {
+    company: 'MPG Club & Events',
+    location: 'Texas · Remote',
+    period: 'Oct 2023 – May 2024',
+    current: false,
+    role: 'Frontend Developer',
+    bullets: [
+      'Developed and maintained React/Next.js features across web and mobile platforms as part of a cross-functional engineering team.',
+      'Built responsive UI components from Figma designs, ensuring pixel-accurate, cross-device consistency.',
+      'Participated in CI/CD workflows on AWS and GitHub Actions, including deployment and environment configuration.',
+      'Collaborated with product and design stakeholders to translate requirements into sprint-ready development tasks.',
+      'Contributed to Vite build optimisations including tree-shaking and code splitting to reduce bundle size and improve load performance.',
+    ],
+  },
+
+  {
     company: 'Blutech Solution',
     location: 'Remote',
     period: 'Dec 2023 – Jun 2024',
