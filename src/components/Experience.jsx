@@ -18,8 +18,8 @@ const jobs = [
   {
     company: 'Acire23Network',
     location: 'Houston, TX · Remote',
-    period: 'Feb 2024 – Apr 2026',
-    current: true,
+    period: 'Sep 2024 – Apr 2026',
+    current: false,
     role: 'Frontend Developer',
     bullets: [
       'Built scalable, reusable React components with Tailwind CSS, improving code maintainability across the application.',
